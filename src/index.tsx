@@ -99,7 +99,7 @@ window.customCards = window.customCards || [];
 // @ts-ignore
 window.customCards.push({
     type: 'threedy-prusa',
-    name: "Threedy Card",
+    name: "Threedy Prusa Card",
     preview: false,
-    description: "OctoPrint 3D Printer Card"
+    description: "Prusa 3D Printer Card"
 })
