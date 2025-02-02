@@ -5,7 +5,7 @@ ___
 <br />
 
 # threedy
-## Home Asssistant card for 3D printers (via OctoPrint integration)
+## Home Asssistant card for 3D printers (via PrusaLink integration)
 
 
 ![Featured](https://github.com/yatryan/threedy-prusa/raw/master/screenshots/active.png)
@@ -37,7 +37,7 @@ ___
 
 - Live animation of 3D printer
 - Live camera view
-- Current states of various OctoPrint sensors
+- Current states of various PrusaLink sensors
 - Tap to show/hide when printer is idle
 - Power button for a switch entity
 - Light button for a switch entity
@@ -49,7 +49,7 @@ ___
 ---
 - [Prusa](https://www.prusa3d.com/) 3D printer
 - [Home Assistant](https://www.home-assistant.io/) instance
-- Home Assistant [OctoPrint integration](https://www.home-assistant.io/integrations/prusalink/)
+- Home Assistant [PrusaLink integration](https://www.home-assistant.io/integrations/prusalink/)
   - *** Make sure to expose all available data entities for your printer! ***
 
 
@@ -87,7 +87,7 @@ ___
 #### Required
 
 - ```type``` &mdash; Always ```'custom:threedy-prusa-card'```
-- ```base_entity``` &mdash; Take the beginning of one of the OctoPrint sensors of your printer. Example: for ```sensor.ender_3_v2_current_state``` it would be ```sensor_ender_3_v2```.
+- ```base_entity``` &mdash; Take the beginning of one of the PrusaLink sensors of your printer. Example: for ```sensor.ender_3_v2_current_state``` it would be ```sensor_ender_3_v2```.
 - ```name``` &mdash; Can be whatever you want!
 - ```printer_type``` &mdash; Use a  printer style: ```'I3' | 'Cantilever' ```
 - ```monitored``` &mdash; A list of values to monitor throughout the print; gets displayed to the right of the printer.
@@ -101,7 +101,6 @@ ___
 - ```round_temperature``` &mdash; Specify whether to round decimal numbers for temperatures. Defaults to false. ```true | false```
 - ```temperature_unit``` &mdash; Specify which unit of temperature measurement to convert to. ```'F' | 'C' ```
 - ```use_24hr``` &mdash; Use 24 hour time format instead of 12 hour.
-- ```use_mqtt``` &mdash; Use [MQTT integration](https://plugins.octoprint.org/plugins/homeassistant/) instead of OctoPrint API.
 - ```printer_config``` &mdash; Use in with ```printer_type``` to set a custom printer style. If omitted, the default for the type will be used. Use [this tool](https://google.com) to create a custom value.
 - ```camera_entity``` &mdash; Specify the entity ID of the camera entity you want to display **when the printer graphic is clicked**.
 - ```light_entity``` &mdash; Specify the entity ID of a light you want to toggle for the printer.
