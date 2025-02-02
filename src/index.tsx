@@ -41,7 +41,7 @@ class ThreedyEditor extends HTMLElement {
 
 }
 
-customElements.define('threedy-editor', ThreedyEditor);
+customElements.define('threedy-prusa-editor', ThreedyEditor);
 
 
 class ThreedyCard extends HTMLElement {
@@ -85,20 +85,20 @@ class ThreedyCard extends HTMLElement {
 
 
     static getConfigElement() {
-        return document.createElement('threedy-editor');
+        return document.createElement('threedy-prusa-editor');
     }
 
 
 }
 
-customElements.define('threedy-card', ThreedyCard);
+customElements.define('threedy-prusa-card', ThreedyCard);
 
 
 // @ts-ignore
 window.customCards = window.customCards || [];
 // @ts-ignore
 window.customCards.push({
-    type: 'threedy-card',
+    type: 'threedy-prusa-card',
     name: "Threedy Card",
     preview: false,
     description: "OctoPrint 3D Printer Card"
