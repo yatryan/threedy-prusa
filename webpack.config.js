@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry: './src/index.tsx',
     output: {
-        filename: 'threedy-prusa-card.js',
+        filename: 'threedy-prusa.js',
         path: path.resolve(__dirname, 'dist'),
     },
     resolve: {

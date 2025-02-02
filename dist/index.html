@@ -60,7 +60,7 @@
             function setConfig(tag)
             {
                 document.getElementsByTagName(tag)[0].setConfig({
-                    type: 'custom:threedy-prusa-card',
+                    type: 'custom:threedy-prusa',
                     base_entity: 'sensor.ender_3_v2',
                     name: "Ender 3 v2",
                     theme: "Neumorphic",
@@ -85,8 +85,8 @@
 
             function load()
             {
-                setHass('threedy-prusa-card');
-                setConfig('threedy-prusa-card');
+                setHass('threedy-prusa');
+                setConfig('threedy-prusa');
             }
 
             function loadConfig()
@@ -136,7 +136,7 @@
 
         </style>
 
-        <script src='./threedy-prusa-card.js'></script>
+        <script src='./threedy-prusa.js'></script>
 
     </head>
 
@@ -144,9 +144,9 @@
 
 
     <div class="FauxColumn">
-            <threedy-prusa-card>
+            <threedy-prusa>
 
-            </threedy-prusa-card>
+            </threedy-prusa>
             <threedy-prusa-editor>
 
             </threedy-prusa-editor>

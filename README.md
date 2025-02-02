@@ -63,11 +63,11 @@ ___
 
 ### Method 2: Manual
 
-1. Download ```threedy-prusa-card.js``` from the releases section.
+1. Download ```threedy-prusa.js``` from the releases section.
 2. Either:
   * Move to the ```www``` folder of your Home Assistant instance
   * Or copy the ffle's contents via the file editor.
-3. In the Resources section of Lovelace (```Configuration -> Lovelace Dashboards -> Resources```), add ```/local/threedy-prusa-card.js``` as a ```JavaScript Module```.
+3. In the Resources section of Lovelace (```Configuration -> Lovelace Dashboards -> Resources```), add ```/local/threedy-prusa.js``` as a ```JavaScript Module```.
 4. Save
 5. Add a manual card to your lovelace dashboard using the configuration instructions below.
 6. Restart Server management
@@ -86,7 +86,7 @@ ___
 
 #### Required
 
-- ```type``` &mdash; Always ```'custom:threedy-prusa-card'```
+- ```type``` &mdash; Always ```'custom:threedy-prusa'```
 - ```base_entity``` &mdash; Take the beginning of one of the PrusaLink sensors of your printer. Example: for ```sensor.ender_3_v2_current_state``` it would be ```sensor_ender_3_v2```.
 - ```name``` &mdash; Can be whatever you want!
 - ```printer_type``` &mdash; Use a  printer style: ```'I3' | 'Cantilever' ```
@@ -111,7 +111,7 @@ ___
 
 ```yaml
 # required
-type: 'custom:threedy-prusa-card'
+type: 'custom:threedy-prusa'
 base_entity: 'sensor.ender_3_v2'
 name: 'Ender 3 v2'
 printer_type: I3
@@ -139,11 +139,11 @@ Example usage as follows:
 ```yaml
 type: 'custom:mod-card'
 style: |
-  threedy-prusa-card > div {
+  threedy-prusa > div {
     box-shadow: none !important;
   }
 card:
-  type: 'custom:threedy-prusa-card'
+  type: 'custom:threedy-prusa'
     .
     .
     .
