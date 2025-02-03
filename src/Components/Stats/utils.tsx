@@ -133,7 +133,7 @@ const percentComplete = (
     hass: HomeAssistant,
     config: ThreedyConfig
 ) => {
-    return (hass.states[config.use_mqtt ? `${config.base_entity}_print_progress` : `${config.base_entity}_job_percentage`] || { state: -1.0 }).state;
+    return (hass.states[`${config.base_entity}_progress`] || { state: -1.0 }).state;
 }
 
 export {
