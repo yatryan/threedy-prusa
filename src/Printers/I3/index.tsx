@@ -29,7 +29,7 @@ const I3 = ({ printerConfig }) => {
     });
 
 
-    const printing = (hass.states[`${config.base_entity}`] || { state: "unknown" }).state === 'Printing';
+    const printing = (hass.states[`${config.base_entity}`] || { state: "unknown" }).state === 'printing';
     const progress = (hass.states[`${config.base_entity}_progress`] || { state: 0 }).state / 100;
 
     const x = useMotionValue(0);
