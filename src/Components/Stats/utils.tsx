@@ -50,13 +50,13 @@ const renderCondition = (
             return (
                 <Stat
                     name={"Status"}
-                    value={ entity( mqtt ? '_print_status' : '_current_state').state }
+                    value={ entity( '_current_state').state } // tODO
                 />
             )
         case ThreedyCondition.ETA:
             return (
                 <TimeStat
-                    timeEntity={ entity( mqtt ? '_print_time_left' : '_time_remaining' ) }
+                    timeEntity={ entity( '_print_finish' ) }
                     condition={condition}
                     config={config}
                     direction={0}
@@ -65,7 +65,7 @@ const renderCondition = (
         case ThreedyCondition.Elapsed:
             return (
                 <TimeStat
-                    timeEntity={ entity( mqtt ? '_print_time' : '_time_elapsed' ) }
+                    timeEntity={ entity( '_time_elapsed' ) } // tODO
                     condition={condition}
                     config={config}
                     direction={1}
@@ -75,7 +75,7 @@ const renderCondition = (
         case ThreedyCondition.Remaining:
             return (
                 <TimeStat
-                    timeEntity={ entity( mqtt ? '_print_time_left' : '_time_remaining' ) }
+                    timeEntity={ entity( '_time_remaining' ) } // tODO
                     condition={condition}
                     config={config}
                     direction={-1}
@@ -86,7 +86,7 @@ const renderCondition = (
             return (
                 <TemperatureStat
                     name={"Bed"}
-                    temperatureEntity={ entity( mqtt ? '_bed_temperature' : '_actual_bed_temp' ) }
+                    temperatureEntity={ entity( '_heatbed_temperature' ) }
                     config={config}
                 />
             )
@@ -95,7 +95,7 @@ const renderCondition = (
             return (
                 <TemperatureStat
                     name={"Hotend"}
-                    temperatureEntity={ entity( mqtt ? '_tool_0_temperature' : '_actual_tool0_temp' ) }
+                    temperatureEntity={ entity( '_nozzle_temperature' ) }
                     config={config}
                 />
             )
