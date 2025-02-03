@@ -50,7 +50,7 @@ const renderCondition = (
             return (
                 <Stat
                     name={"Status"}
-                    value={ entity( '_current_state').state } // tODO
+                    value={ entity('').state }
                 />
             )
         case ThreedyCondition.ETA:
@@ -65,7 +65,7 @@ const renderCondition = (
         case ThreedyCondition.Elapsed:
             return (
                 <TimeStat
-                    timeEntity={ entity( '_time_elapsed' ) } // tODO
+                    timeEntity={ entity( '_print_start' ) }
                     condition={condition}
                     config={config}
                     direction={1}
