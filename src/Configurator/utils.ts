@@ -1,6 +1,6 @@
 import {HomeAssistant, ThreedyConfig} from "../types";
 
-/* Printer Entity ID -> Name; E.G. sensor.printer_name_current_state -> Printer Name */
+/* Printer Entity ID -> Name; E.G. sensor.printer_name_print_finish -> Printer Name */
 const printerName = ( entityId: string | undefined ) => {
 
     if ( !entityId ) {
@@ -8,7 +8,7 @@ const printerName = ( entityId: string | undefined ) => {
     }
 
     return entityId
-        .replace(/(_current_state|_print_progress)/, '')
+        .replace(/(_print_finish|_print_progress)/, '')
         .replace('sensor.', '')
         .split("_")
         .map(s => s.charAt(0).toUpperCase() + s.substring(1))
@@ -16,7 +16,7 @@ const printerName = ( entityId: string | undefined ) => {
 
 }
 
-/* Printer Entity ID -> Base Entity; E.G. sensor.printer_name_current_state -> sensor.printer_name */
+/* Printer Entity ID -> Base Entity; E.G. sensor.printer_name_print_finish -> sensor.printer_name */
 const printerBase = ( entityId: string | undefined ) => {
 
     if ( !entityId ) {
@@ -24,7 +24,7 @@ const printerBase = ( entityId: string | undefined ) => {
     }
 
     return entityId
-        .replace(/(_current_state|_print_progress)/, '');
+        .replace(/(_print_finish|_print_progress)/, '');
 
 }
 
@@ -32,7 +32,7 @@ const getPrinters = ( hass: HomeAssistant ) => {
 
     const printers = {};
     Object.keys( hass.states ).filter(
-        entityId => (/sensor\..*(_current_state|_print_progress)/g).test(entityId)
+        entityId => (/sensor\..*(_print_finish|_print_progress)/g).test(entityId)
     ).map(
         entityId => {
 

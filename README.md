@@ -87,7 +87,7 @@ ___
 #### Required
 
 - ```type``` &mdash; Always ```'custom:threedy-prusa'```
-- ```base_entity``` &mdash; Take the beginning of one of the PrusaLink sensors of your printer. Example: for ```sensor.ender_3_v2_current_state``` it would be ```sensor_ender_3_v2```.
+- ```base_entity``` &mdash; Take the beginning of one of the PrusaLink sensors of your printer. Example: for ```sensor.prusalink_print_finish``` it would be ```sensor_prusalink```.
 - ```name``` &mdash; Can be whatever you want!
 - ```printer_type``` &mdash; Use a  printer style: ```'I3' | 'Cantilever' ```
 - ```monitored``` &mdash; A list of values to monitor throughout the print; gets displayed to the right of the printer.
